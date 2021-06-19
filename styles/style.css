@@ -968,3 +968,307 @@ footer {
         height: 350px;
     }
 }
+
+@media (max-width: 375px) {
+    .section__wrapper {
+        width: 375px;
+    }
+
+    .header__wrapper {
+        width: 375px;
+        height: 150px;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-around;
+    }
+
+    .header__logo {
+        margin-right: 25px;
+    }
+
+    .header__navbar nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__navbar nav {
+        width: 100%;
+    }
+
+    @keyframes slide {
+
+        from {
+         top: 0;
+         left: 0;
+        }
+    
+        12.5% {
+         transform: translate(0px, 0px);
+        }
+    
+        25% {
+         transform: translate(-286px, 0px);
+        }
+    
+        36% {
+         transform: translate(-286px, 108px);
+        }
+    
+        37% {
+         transform: translate(286px, 108px);
+        }
+    
+        87.5% {
+         transform: translate(286px, 0);
+        }
+    
+        to {
+         transform: (0px, 0px);
+        }
+    }
+    
+    .slide1 { 
+        background: url(../images/sl1.jpg) 10% 10% no-repeat;
+        animation-delay: 7.5s;
+    }
+    
+    .slide2 { 
+        background: url(../images/sl2.jpg);
+        animation-delay: 5s;
+    }
+    
+    .slide3 { 
+        background: url(../images/sl3.jpg);
+        animation-delay: 2.5s;
+    }
+    
+    .slide4 { 
+        background: url(../images/sl4.jpg);
+        animation-delay: 0s;
+    }
+
+    .discount {
+        background-color: #0ebc9d1c;
+        padding-bottom: 25px;
+    }
+    
+    .discount__wrapper {
+        display: flex;
+        flex-direction: column;
+    
+        align-items: center;
+    }
+    
+    .discount__slider {
+        width: 286px;
+        height: 108px;
+        margin: 0 auto;
+        margin-top: 25px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .slide {
+        width: 286px;
+        height: 108px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation-name: slide;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    /* --------------------product------------------- */
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .product {
+        margin-top: 25px;
+    }
+
+    .product__wrapper {
+        margin-bottom: 10px;
+    }
+
+    .product__wrapper {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+    }
+
+    .product__list {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .product__item {
+        display: flex;
+        flex-direction: column;
+
+        height: 450px;
+
+        margin-top: 100px;
+        border-radius: 15px;
+
+        margin: 0 auto;
+    }
+    /* --------------------about company------------------- */
+
+    .about {
+        margin-top: 75px;
+        background-color: #0ebc9d1c;
+    }
+
+    .about__title {
+        padding-top: 25px;
+        text-align: center;
+    }
+
+    .about__content {
+        display: flex;
+        margin-top: 25px;
+
+        align-items: center;
+
+        flex-direction: column;
+    }
+
+    .advantages__list {
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: space-between;
+    }
+
+    .advantages__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: 25px;
+        width: 310px;
+        height: 75px;
+    }
+
+    .advantages__item img {
+        width: 50px;
+        margin-right: 25px;
+    }
+
+    .about__text {
+        width: 80%;
+        display: flex;
+
+        margin-bottom: 35px;
+        
+        border: 1px dashed #0ebc9d;
+
+        background-color: #0ebc9d08;
+    }
+
+    .about__text p { 
+        text-align: justify;
+    }
+
+    .about__text img {
+        width: 50px;
+        height: 50px;
+        margin-right: 25px;
+        opacity: 0.2;
+    }
+
+    .advantages__title {
+        margin-bottom: 25px;
+    }
+
+    /* ------------------------ filter ------------------------ */
+
+    .filter {
+        margin-top: 25px;
+    }
+
+    .filter__element {
+        width: 300px;
+        height: 300px;
+    }
+
+    .filter__list label {
+        width: 50%;
+        float:left;
+        text-align: center;
+        background:#ffffff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        color:#222222;
+        padding:0.5%;
+        margin:0.5%;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    /* ---------------------------- news -------------------------- */
+    .news__list {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+    
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .news__item {
+        width: 270px;
+
+        border: 1px dashed #0cbb9d;
+        padding: 10px 10px;
+
+        margin-top: 15px;
+
+        background-color: #0ebc9d08;
+    }
+
+    /* ---------------------------- feedback -------------------------- */
+
+    .feedback {
+        margin-top: 25px;
+    }
+
+    .feedback__wrapper {
+        margin-bottom: 50px;
+    }
+
+    .feedback__title {
+        margin-bottom: 35px;
+    }
+
+    .feedback__form {
+        width: 300px;
+    }
+
+    .feedback__form input[type="text"] {
+        width: 300px;
+    }
+
+    .feedback__form textarea {
+        max-width: 300px;
+    }
+
+    .feedback__form input[type="button"] {
+        width: 300px;
+    }
+
+    /* ------------------------- footer -------------------------- */
+
+    .footer__wrapper { /* блок шапки */
+        width: 375px;
+        height: 350px;
+    }
+}
