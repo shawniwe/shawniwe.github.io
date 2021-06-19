@@ -969,13 +969,13 @@ footer {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 828px) {
     .section__wrapper {
-        width: 375px;
+        width: 828px;
     }
 
     .header__wrapper {
-        width: 375px;
+        width: 828px;
         height: 150px;
 
         display: flex;
@@ -1268,7 +1268,7 @@ footer {
     /* ------------------------- footer -------------------------- */
 
     .footer__wrapper { /* блок шапки */
-        width: 375px;
+        width: 828px;
         height: 350px;
     }
 }
