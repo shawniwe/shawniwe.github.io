@@ -88,42 +88,67 @@
             </div>
         </section>
         <section class="section menu-dish">
+            <div class="popup-window popup-window--hidden">
+                <div class="dish-popup">
+                    <div class="dish-popup__close-btn">x</div>
+                    <div class="dish-popup__content">
+                        <img class="dish-popup__img" src = "img/ChickenInTeriyakiSauce.png">
+                        <div class="dish-popup__text">
+                            <p class="dish-popup__header">Название блюда</p>
+                            <p class="dish-popup__description">Максимально подробное и интересное описание блюда</p>
+                            <p class="dish-popup__dish-weight">476 г.</p>
+
+                        </div>
+                    </div>
+                    <div class="dish-popup__settings">
+                        <form>
+                            <div class="dish-popup__settings-add">
+
+                                <input class="dish-popup__settings-button-minus" type="button" value="-">
+                                <input type="text" name="" id="" class="dish-popup__settings-dish-count" readonly value="1">
+                                <input class="dish-popup__settings-button-plus" type="button" value="+">
+                            </div>
+                            <input class="dish-popup__to-order-btn" type="submit" value="Добавить в корзину">
+                        </form>
+                    </div>
+                </div>
+            </div>
             <div class="container menu_dishes">
                 <h3>Меню</h3>
                 <div class="menu-dish__list">
                     <div class="menu-dish__item">
                         <img class="menu-dish__dish-image" src="img/ChickenInTeriyakiSauce.png" alt="">
-                        <a class="menu-dish__details" href="#">
+                        <a class="menu-dish__details">
                             <img class="menu-dish__details-arrow" src="img/orangearrow_icon.png">
                         </a>
                         <div class="menu-dish__item-text">
                             <p class="menu-font">Курица в соусе <br> терияки</p>
-                            <p class="menu-font__mini">куриная грудка,<br> сыр,шампиньоны, <br>майонез</p>
+                            <p class="menu-font__mini">куриная грудка,<br> сыр, шампиньоны, <br>майонез</p>
                         </div>
                     </div>
                     <div class="menu-dish__item">
                         <img class="menu-dish__dish-image" src="img/PumpkinCreamSoup.png" alt="">
-                        <a class="menu-dish__details" href="#">
+                        <a class="menu-dish__details">
                             <img class="menu-dish__details-arrow" src="img/orangearrow_icon.png">
                         </a>
                         <div class="menu-dish__item-text">
                             <p class="menu-font">Тыквенный <br> крем-суп</p>
-                            <p class="menu-font__mini">куриная грудка,<br> сыр,шампиньоны,<br> майонез</p>
+                            <p class="menu-font__mini">куриная грудка,<br> сыр, шампиньоны,<br> майонез</p>
                         </div>
                     </div>
                     <div class="menu-dish__item">
                         <img class="menu-dish__dish-image" src="img/SummerSalad.png" alt="">
-                        <a class="menu-dish__details" href="#">
+                        <a class="menu-dish__details">
                             <img class="menu-dish__details-arrow" src="img/orangearrow_icon.png">
                         </a>
                         <div class="menu-dish__item-text">
                             <p class="menu-font">Салат <br> летний</p>
-                            <p class="menu-font__mini">капуста красная,<br> капуста белая,<br> морковь,сметана</p>
+                            <p class="menu-font__mini">капуста красная,<br> капуста белая,<br> морковь, сметана</p>
                         </div>
                     </div>
                     <div class="menu-dish__item">
                         <img class="menu-dish__dish-image" src="img/CollSlowSalad.png" alt="">
-                        <a class="menu-dish__details" href="#">
+                        <a class="menu-dish__details">
                             <img class="menu-dish__details-arrow" src="img/orangearrow_icon.png">
                         </a>
                         <div class="menu-dish__item-text">
@@ -223,6 +248,10 @@
             <div class="container"></div>
         </section>
     </footer>
+
+    <script src="scripts/call.js"></script>
+    <script src="scripts/dish-popup-fill-and-oc.js"></script>
+    <script src="scripts/dish-popup-add-count.js"></script>
 </body>
 
 </html>

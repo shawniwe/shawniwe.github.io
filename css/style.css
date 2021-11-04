@@ -103,7 +103,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 80%;
 
 }
 
@@ -133,7 +133,7 @@ h3 {
 }
 
 .header__menu-phonecall a {
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 16px;
 
     text-decoration: underline 1px;
@@ -142,6 +142,14 @@ h3 {
 
     color: #1F1F1F;
 
+    margin-right: 20px;
+
+    transition: 0.2s;
+}
+
+.header__menu-phonecall a:hover {
+    color: #6d6d6d;
+    transition: 0.2s;
 }
 
 .header__delivery {
@@ -160,10 +168,6 @@ h3 {
     border: 0px;
     background: none;
     outline: none;
-}
-
-.phone-number * {
-    background-color: rgba(0, 0, 0, 0.075);
 }
 
 .button-orange {
@@ -261,7 +265,6 @@ h3 {
 }
 
 .delivery__item:hover .delivery__details {
-
     color: white;
     transition: 0.02s;
     display: flex;
@@ -437,7 +440,7 @@ h3 {
 .popular-dish {
     height: 800px;
     display: flex;
-    background: url("../img/bg1.png") no-repeat calc(50% + 600px) 0, linear-gradient(to right, white 70%, #EE7700 30%);
+    background: url("../img/bg1.png") no-repeat calc(50% + 600px) 0, linear-gradient(to right, white 90%, #EE7700 10%);
 }
 
 .popular-eat {
@@ -613,9 +616,175 @@ h3 {
 
     visibility: hidden;
     opacity: 0;
+
+    box-shadow: 0px 0px 33px rgba(0, 0, 0, 0.2);
 }
 
 .menu-dish__details:hover {
     background-color: lightgray;
     transition: 0.1s;
+}
+
+.popup-window {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.356);
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99;
+
+    opacity: 100%;
+    transition: 0.2s
+}
+
+.popup-window--hidden {
+    visibility: hidden;
+    opacity: 0%;
+    transition: 0.2s;
+}
+
+.dish-popup {
+    padding: 0px 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+    border-radius: 15px;
+
+    padding-bottom: 25px;
+}
+
+.dish-popup__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: auto 0;
+
+    margin-bottom: 25px;
+}
+
+.dish-popup__settings {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    height: 100%;
+}
+
+.dish-popup__close-btn {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+    margin-right: 10px;
+
+    font-weight: 800;
+
+    cursor: pointer ;
+}
+
+.dish-popup__text {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+
+    justify-content: space-around;
+}
+
+.dish-popup__header {
+    font-size: 28px;
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
+.dish-popup__description {
+    margin-bottom: 15px;
+}
+
+.dish-popup__img {
+    margin-right: 50px;
+    filter: drop-shadow(8px 12px 44px rgba(0, 0, 0, 0.17));
+}
+
+.dish-popup__dish-weight {
+    font-size: 16px;
+    color: gray;
+}
+
+.dish-popup__to-order-btn {
+    width: 246px;
+    height: 48px;
+    background-color: #EE7700;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 24px 24px 24px;
+
+    box-shadow: 0px 0px 16px rgba(255, 119, 20, 0.44);	
+	transition: 0.3s;
+
+    border: 0;
+
+    cursor: pointer;
+}
+
+.dish-popup__to-order-btn:hover {
+    background-color: #ff8a16;
+}
+
+.dish-popup__settings-header {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.dish-popup__settings-add {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 25px;
+}
+
+.dish-popup__settings-button-minus {
+    border-radius: 10px 0 0 10px;
+}
+
+.dish-popup__settings-button-plus {
+    border-radius: 0 10px 10px 0;
+}
+
+.dish-popup__settings-button-plus, .dish-popup__settings-button-minus {
+    width: 50px;
+    background-color: white;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.dish-popup__settings-button-plus:hover, .dish-popup__settings-button-minus:hover {
+    background-color: gainsboro;
+    transition: 0.2s;
+}
+
+.dish-popup__settings-dish-count {
+    width: 100px;
+    border: 1px solid gray;
+    border-left: 0;
+    border-right: 0;
+    text-align: center;
+    outline: none;
 }
