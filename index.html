@@ -65,7 +65,7 @@
                 <div class="header__eat">
                     <p class="moscow"> <img src="img/point_icon.png" alt=""> Москва</p>
                     <h1 class="h2">Доставка обедов в офис</h1>
-                    <p>Для каждой компании меню по доставке обедов подбирается индивидуально,
+                    <p class="header__description">Для каждой компании меню по доставке обедов подбирается индивидуально,
                         исходя из ваших вкусов и предпочтений.</p>
                     <a href="#menu" class="button-orange">Наше меню</a>
                 </div>
@@ -263,15 +263,34 @@
                 <div class="footer___price">
                     <h1 class="footer___first-text">РАСЧИТАТЬ <br> СТОИМОСТЬ ОБЕДА</h1>
                     <p class="footer___last-text">Заполните небольшую форму и наш менеджер <br> свяжется с вами в ближайшее время</p>
-                    <div class="read__info">
-                        <div class="border__read-line">
-                            <input type="text" class="read-line__one" placeholder="03-05-2020"></input>
-                            <input type="text" class="read-line__two" placeholder="03-05-2020">
+                    <form class="footer__makeorder-form">
+                        <div class="footer_makeorder-form__top-inputs">
+                            <div class="top-inputs__date">
+                                <label for="form__date">Дата</label>
+                                <input type="date" name="input-date" id="form__date" placeholder="03.05.2020">
+                            </div>
+                            <div class="top-inputs__persons-count">
+                                <label for="form__person-count">Кол-во человек</label>
+                                <select name="select-person-count" id="form__person-count">
+                                    <option>1 человек</option>
+                                    <option>2 человека</option>
+                                    <option>3 человека</option>
+                                    <option>4 человека</option>
+                                    <option>5 человек</option>
+                                    <option>6 человек</option>
+                                </select>
+                            </div>
+
                         </div>
-                        <input type="text" class="read-line__fhree" placeholder="Андрей Васильевич">
-                        <input type="tel" class="read-line__fhree" placeholder="+7(999)999 99 99">
-                        <a href="#" class="button-orange">Рассчитать</a>
-                    </div>
+                        <div class="footer_makeorder-form__bottom-inputs">
+                            <label for="form__person-name">Имя</label>
+                            <input type="text" name="person_name" id="form__person-name" placeholder="Андрей Васильевич">
+                            <label for="form__tel">Телефон</label>
+                            <input type="tel" name="tel" id="form__tel" placeholder="+7 (999) 999-99-99">
+                        </div>
+
+                        <input type="submit" value="Рассчитать" class="button-orange">
+                    </form>
                     
                 </div>
             </div>

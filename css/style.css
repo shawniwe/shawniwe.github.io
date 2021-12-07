@@ -5,6 +5,12 @@ body {
 
     font-family: 'Montserrat';
     box-sizing: content-box;
+
+    height: 100%;
+}
+
+html {
+    min-height: 100%;
 }
 
 .section {
@@ -14,13 +20,10 @@ body {
 .container {
     width: 1200px;
     margin: 0 auto;
-}
 
-p {
-    font-size: 18px;
-    font-weight: 400;
-
-    margin: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+    box-sizing: content-box;
 }
 
 h1 {
@@ -49,11 +52,29 @@ h3 {
     transition: 0.2s;
     color: #181818;
     cursor: pointer;
+    position: relative;
 }
 
-.header__list-item:hover {
-    border-bottom: 1px solid rgba(255, 127, 34, 255);
+.header__list-item::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 3px;
+    background-color:rgba(0, 0, 0, 0.0);
     transition: 0.2s;
+
+    margin: 0 auto;
+}
+
+.header__list-item:hover::after {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: orange;
+    transition: 0.2s;
+
+    margin: 0 auto;
 }
 
 .logo {
@@ -117,8 +138,14 @@ h3 {
     width: 500px;
 }
 
+.header__description {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26.89px;
+}
+
 .header__info {
-    padding-bottom: 200px;
+    padding-bottom: 180px;
 }
 
 /*--------------section header-delivery --------------*/
@@ -132,9 +159,13 @@ h3 {
     justify-content: right;
 }
 
+.header__eat .button-orange {
+    font-weight: 600;
+}
+
 .header__menu-phonecall a {
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 12px;
 
     text-decoration: underline 1px;
     text-decoration-style: dashed;
@@ -182,10 +213,12 @@ h3 {
     border-radius: 0px 24px 24px 24px;
 
     box-shadow: 0px 0px 16px rgba(255, 119, 20, 0.44);
-
+    font-weight: 600;
     margin-top: 48px;
 	
 	transition: 0.3s;
+
+    border: 0px;
 }
 
 /* ----------------------- section delivery ------------------ */
@@ -214,13 +247,13 @@ h3 {
 
     justify-content: space-around;
 
-    height: 200px;
+    height: 160px;
     width: 223px;
 
     box-shadow: 0px 0px 33px rgba(0, 0, 0, 0.075);
     border-radius: 0 33px 33px 33px;
 
-    padding-top: 42px;
+    padding-top: 67px;
     padding-bottom: 42px;
     padding-left: 27px;
     padding-right: 27px;
@@ -268,6 +301,7 @@ h3 {
     color: white;
     transition: 0.02s;
     display: flex;
+    opacity: 1;
 }
 
 .delivery__item-text {
@@ -299,6 +333,8 @@ h3 {
 
     color: black;
     text-decoration: none;
+
+    opacity: 0;
 }
 
 .arrow_icon {
@@ -340,11 +376,11 @@ h3 {
     font-size: 34px;    
 	font-weight: 700;
     text-align: center;
+    margin-top: 0;
 }
 
 .review__item {
     width: 637px;
-    height: 233px;
 }
 
 .review__item-text .button {
@@ -392,12 +428,14 @@ h3 {
 
 .about-company__info {
 	display: block;
-	width: 45%;
+	width: 50%;
 }
 
 .about-company__info p {
 	font-size: 18px;
 	margin-top: 24px;
+    line-height: 27px;
+    font-weight: 400;
 }
 
 .about-company__images {
@@ -433,8 +471,10 @@ h3 {
 }
 
 /*------------------------ section popular-dish --------------------------*/
-.popular_dish-text {
-    width: 458px;
+.popular-dish-text p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26,17px;
 }
 
 .popular-dish {
@@ -488,9 +528,9 @@ h3 {
 .menu-font__mini {
     margin-top: 8px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
-    line-height: 25px;
+    line-height: 24,86px;
 }
 
 .menu-switching__arrows {
@@ -790,7 +830,7 @@ h3 {
 }
 /*----------------------- footer --------------------------*/
 .footer___first-text{
-    padding-top: 98px;
+    padding-top: 50px;
     color: white;
     margin-top: 0;
 }
@@ -799,6 +839,8 @@ h3 {
     color: #FFFFFF;
     font-size: 18px;
     font-weight: 400px;
+    line-height: 27.97px;
+    margin-bottom: 28px;
     
 }
 .button-orange2 {
@@ -851,31 +893,148 @@ input[type="text"]::-moz-placeholder {
     margin-top: 39px;
 }
 
+main {
+    padding-bottom: 812px;
+}
 
-.footer{
+.footer {
+
     background-image: url(../img/footer-Bg.png);
     height: 812px;
+    margin-top: -812px;
 }
-.lunch-cost{
-    height: 691px;
-}
-.footer-menu{
-    
+
+.footer-menu {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(33px);
     background: rgba(33, 33, 33, 0.47);
+    justify-content: center;
+    height: 80px;
+    margin-top: 50px;
 }
 .footer__list-item{
     color: white;
     font-size: 14px;
 }
+
+.lunch_cost {
+    height: auto;
+}
+
 .footer__list-nav{
-    height: 80px;
     list-style: none;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-left: 0;
 }
-a{
+
+a   {
     text-decoration:none;
+}
+
+.footer__makeorder-form input[type="date"] {
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 157px;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: white;
+    padding-left: 14px;
+
+    outline: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.footer__makeorder-form {
+    width: 381px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__makeorder-form select option {
+    color: black;
+}
+
+.footer__makeorder-form select {
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 202px;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: white;
+    padding-left: 14px;
+
+    outline: none;
+}
+
+.footer__makeorder-form input[name="person_name"] {
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: white;
+    padding-left: 14px;
+
+    outline: none;
+}
+
+.footer_makeorder-form__top-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer__makeorder-form input[type="tel"] {
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: white;
+    padding-left: 14px;
+
+    outline: none;
+}
+
+.footer_makeorder-form__top-inputs label {
+    margin-bottom: 5px;
+}
+
+.footer_makeorder-form__top-inputs {
+    margin-bottom: 24px;
+}
+
+.footer_makeorder-form__bottom-inputs input {
+    margin-bottom: 24px;
+    margin-top: 5px;
+}
+
+.footer__makeorder-form label {
+    color: white;
+    line-height: 17.07px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.top-inputs__date, .top-inputs__persons-count {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__makeorder-form .button-orange {
+    margin-top: 25px;
 }
