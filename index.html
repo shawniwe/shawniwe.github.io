@@ -33,7 +33,7 @@
 <body>
     <header class="header">
 
-        <a name = "home"></a>
+        <a name="home"></a>
         <section class="section header__menu">
             <div class="container header__navigate">
                 <div class="logo">
@@ -48,14 +48,22 @@
                     <li><a href="#review" class="header__list-item">Контакты</a></li>
                 </ul>
 
-                <div class="header__menu-phonecall">
-                    <img src="img/phone_icon.png" alt="">
-                    <select class="phone-number">
-                        <option>+7 (800)-223-72-44</option>
-                        <option>+7 (900)-234-56-77</option>
-                        <option>+7 (997)-226-15-23</option>
-                    </select>
-                    <a href="tel:+78002237244">Заказать звонок</a>
+                <div class="call-block">
+                    <div class="header__menu-phonecall">
+                        <img src="img/phone_icon.png" alt="">
+                        <p class="phone-number">
+                            +7 (800)-223-72-44
+                        </p>
+                        <a href="tel:+78002237244">Заказать звонок</a>
+                    </div>
+                </div>
+                <div class="header__menu-picknumber header__menu-picknumber--hidden">
+                    <div class="header__menu-picknumber-items">
+                        <div class="header__menu-picknumber-item--selected header__menu-picknumber-item">+7 (800)-223-72-44</div>
+                        <div class="header__menu-picknumber-item">+7 (900)-234-56-77</div>
+                        <div class="header__menu-picknumber-item">+7 (997)-226-15-23</div>
+                    </div>
+                    <button class="button-orange">Закрыть</button>
                 </div>
             </div>
         </section>
@@ -65,7 +73,8 @@
                 <div class="header__eat">
                     <p class="moscow"> <img src="img/point_icon.png" alt=""> Москва</p>
                     <h1 class="h2">Доставка обедов в офис</h1>
-                    <p class="header__description">Для каждой компании меню по доставке обедов подбирается индивидуально,
+                    <p class="header__description">Для каждой компании меню по доставке обедов подбирается
+                        индивидуально,
                         исходя из ваших вкусов и предпочтений.</p>
                     <a href="#menu" class="button-orange">Наше меню</a>
                 </div>
@@ -80,51 +89,52 @@
                     <p>Изобилие готовых и вкусных блюд, предлагаемых нашей компанией, позволяет удовлетворить любые
                         потребности в еде.</p>
                     <a href="#menu" class="button-orange">Подробнее</a>
-                    
+
                 </div>
-                
+
                 <div class="orange__half">
                     <img class="gish-img2" src="img/half.png" alt="">
                     <img class="gish-img1" src="img/gish.png" alt="">
                 </div>
-                
+
             </div>
-            
+
         </section>
-        <a name="menu"></a>  
+        <a name="menu"></a>
         <section class="section menu-dish">
             <div class="popup-window popup-window--hidden">
                 <div class="dish-popup">
                     <div class="dish-popup__close-btn">x</div>
                     <div class="dish-popup__content">
-                        <img class="dish-popup__img" src = "img/ChickenInTeriyakiSauce.png">
+                        <img class="dish-popup__img" src="img/ChickenInTeriyakiSauce.png">
                         <div class="dish-popup__text">
                             <p class="dish-popup__header">Название блюда</p>
                             <p class="dish-popup__description">Максимально подробное и интересное описание блюда</p>
                             <p class="dish-popup__dish-weight">476 г.</p>
 
                         </div>
-                        
+
                     </div>
-                    
+
                     <div class="dish-popup__settings">
                         <form>
                             <div class="dish-popup__settings-add">
 
                                 <input class="dish-popup__settings-button-minus" type="button" value="-">
-                                <input type="text" name="" id="" class="dish-popup__settings-dish-count" readonly value="1">
+                                <input type="text" name="" id="" class="dish-popup__settings-dish-count" readonly
+                                    value="1">
                                 <input class="dish-popup__settings-button-plus" type="button" value="+">
                             </div>
                             <input class="dish-popup__to-order-btn" type="submit" value="Добавить в корзину">
                         </form>
-                        
+
                     </div>
-                     
+
                 </div>
-                   
+
             </div>
             <div class="container menu_dishes">
-                
+
                 <h3>Меню</h3>
                 <div class="menu-dish__list">
                     <div class="menu-dish__item">
@@ -169,21 +179,21 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="menu-switching__arrows">
                     <a href="#" class="menu-switching__left-arrow">
                         <img src="img/arrow1_icon.png">
                     </a>
                     <a href="#" class="menu-switching__right-arrow">
                         <img src="img/arrow1_icon.png">
-                        
+
                     </a>
                     <a name="about-company"></a>
                 </div>
-                
+
             </div>
         </section>
-        
+
         <section class="section about-company">
             <div class="container about-company_container">
                 <div class="about-company__content">
@@ -262,7 +272,8 @@
             <div class="container">
                 <div class="footer___price">
                     <h1 class="footer___first-text">РАСЧИТАТЬ <br> СТОИМОСТЬ ОБЕДА</h1>
-                    <p class="footer___last-text">Заполните небольшую форму и наш менеджер <br> свяжется с вами в ближайшее время</p>
+                    <p class="footer___last-text">Заполните небольшую форму и наш менеджер <br> свяжется с вами в
+                        ближайшее время</p>
                     <form class="footer__makeorder-form">
                         <div class="footer_makeorder-form__top-inputs">
                             <div class="top-inputs__date">
@@ -284,14 +295,15 @@
                         </div>
                         <div class="footer_makeorder-form__bottom-inputs">
                             <label for="form__person-name">Имя</label>
-                            <input type="text" name="person_name" id="form__person-name" placeholder="Андрей Васильевич">
+                            <input type="text" name="person_name" id="form__person-name"
+                                placeholder="Андрей Васильевич">
                             <label for="form__tel">Телефон</label>
                             <input type="tel" name="tel" id="form__tel" placeholder="+7 (999) 999-99-99">
                         </div>
 
                         <input type="submit" value="Рассчитать" class="button-orange">
                     </form>
-                    
+
                 </div>
             </div>
         </section>
