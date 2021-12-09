@@ -197,6 +197,8 @@ h3 {
     font-size: 16px;
     font-weight: 700;
     
+    width: 160px;
+
     color: #1F1F1F;
     text-decoration: none;
 
@@ -993,14 +995,12 @@ input[type="text"]::-moz-placeholder {
 }
 
 main {
-    padding-bottom: 812px;
 }
 
 .footer {
 
     background-image: url(../img/footer-Bg.png);
-    height: 812px;
-    margin-top: -812px;
+    padding-bottom: 50px;
 }
 
 .footer-menu {
