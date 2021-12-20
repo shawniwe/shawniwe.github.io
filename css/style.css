@@ -5,12 +5,13 @@ body {
 
     font-family: 'Montserrat';
     box-sizing: content-box;
+}
 
-    height: 100%;
+body, html {
+    min-height: 100%;
 }
 
 html {
-    min-height: 100%;
     scroll-behavior: smooth;
 }
 
@@ -44,7 +45,9 @@ h3 {
 
 /*--------------section header-menu--------------*/
 .header {
-    background-image: url(../img/1sec.png);
+    background: url(../img/1sec.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 .header__list-item {
@@ -165,8 +168,7 @@ h3 {
     font-weight: 600;
 }
 
-.header__menu-phonecall a {
-    margin-top: 5px;
+.phone-caller {
     font-size: 12px;
 
     text-decoration: underline 1px;
@@ -175,6 +177,8 @@ h3 {
 
     color: #1F1F1F;
     transition: 0.2s;
+
+    margin-right: 6px;
 }
 
 .header__menu-phonecall img {
@@ -198,6 +202,13 @@ h3 {
     font-weight: 700;
     
     width: 160px;
+    height: 35px;
+
+    padding: 0 5px 0 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     color: #1F1F1F;
     text-decoration: none;
@@ -208,6 +219,15 @@ h3 {
     margin: 0;
 
     cursor: pointer;
+
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.phone-number:hover {
+    background-color: #ffddb8;
+    color: #ff8000;
+    transition: background-color 0.2s, color 0.1s;
 }
 
 .header__menu-picknumber .button-orange {
@@ -221,6 +241,9 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+    padding: 7px;
+
 }
 .header__menu-picknumber .button-orange {
     margin-top: 0;
@@ -228,6 +251,8 @@ h3 {
     font-weight: 500;
     height: 35px;
     width: 150px;
+
+    box-shadow: none;
 }
 
 .header__menu-picknumber {
@@ -235,13 +260,12 @@ h3 {
     float: right;
 
     width: 225px;
-    height: 225px;
     background-color: rgba(255, 255, 255, 0.726);
 
     position: absolute;
 
     right: 0;
-    top: 50px;
+    top: 95px;
 
     backdrop-filter: blur(20px);
 
@@ -250,15 +274,22 @@ h3 {
     align-items: center;
     justify-content: space-around;
 
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
 
     border-radius: 10px;
-    border: 1px dashed #EE7700;
+    border: 1px solid #DDC8B3;
 
     transition: 0.2s;
+}
 
-    color: #EE7700;
+.header__menu-picknumber-item:hover {
+    background-color: #ffddb8;
+    color: #ff8000;
+    transition: background-color 0.2s, color 0.1s;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 5px;
 }
 
 .header__menu-picknumber--hidden {
@@ -266,33 +297,20 @@ h3 {
     opacity: 0;
 }
 
-.header__menu-picknumber-item--selected {
-    background-color: #EE7700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.header__menu-picknumber-item-description {
+    font-size: 14px;
+    font-weight: 400;
 
-    width: 100%;
-    height: 50px;
-
-    color: white;
-
-}
-
-.header__menu-picknumber-item:hover {
-    background-color: #EE7700;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.2s;
+    margin-top: 5px;
 }
 
 .header__menu-picknumber-item {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-
-    width: 100%;
+    align-items: center;
+    padding: 5px 0 5px 0;
+    width: 95%;
     height: 50px;
     transition: 0.2s;
 }
@@ -445,7 +463,9 @@ h3 {
 
 .review {
     height: 430px;
-    background-image: url(../img/background.jpg);
+    background: url(../img/background.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
     background-color: burlywood;
     display: flex;
     align-items: center;
@@ -575,7 +595,7 @@ h3 {
 .popular-dish {
     height: 800px;
     display: flex;
-    background: url("../img/bg1.png") no-repeat calc(50% + 600px) 0, linear-gradient(to right, white 90%, #EE7700 10%);
+    background: url("../img/bg1.png") no-repeat calc(50% + 600px) 0, linear-gradient(to right, white 85%, #EE7700 15%);
 }
 
 .popular-eat {
@@ -593,6 +613,7 @@ h3 {
 
 .popular_dish-text {
     width: 40%;
+    z-index: 1;
 }
 
 .gish-img1 {
@@ -999,8 +1020,10 @@ main {
 
 .footer {
 
-    background-image: url(../img/footer-Bg.png);
-    padding-bottom: 50px;
+    background: url(../img/footer-Bg.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-bottom: 40px;
 }
 
 .footer-menu {
