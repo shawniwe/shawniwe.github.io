@@ -12,6 +12,7 @@ let isCursorOnNumbers = false;
 
 number.onmouseenter = function() {
     numbersBlock.classList.remove("header__menu-picknumber--hidden");
+    numbersBlock.style.marginTop = "0px";
     isVisible = true;
 }
 
@@ -19,6 +20,7 @@ number.onmouseleave = function () {
     setTimeout(() => {
         if(!isCursorOnNumbers && isVisible) {
             numbersBlock.classList.add("header__menu-picknumber--hidden");
+            numbersBlock.style.marginTop = "10px";
             isVisible = false;
     
             console.log('visible: ' + isVisible);
@@ -34,6 +36,7 @@ numbersBlock.onmouseenter = function () {
 numbersBlock.onmouseleave = function() {
     if(isVisible && isCursorOnNumbers) {
         numbersBlock.classList.add("header__menu-picknumber--hidden");
+        numbersBlock.style.marginTop = "10px";
         isVisible = false;
         isCursorOnNumbers = false;
     }
