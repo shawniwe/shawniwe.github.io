@@ -22,9 +22,6 @@ number.onmouseleave = function () {
             numbersBlock.classList.add("header__menu-picknumber--hidden");
             numbersBlock.style.marginTop = "10px";
             isVisible = false;
-    
-            console.log('visible: ' + isVisible);
-            console.log('on numbers: ' + isCursorOnNumbers);
         }
     }, 100);
 }
