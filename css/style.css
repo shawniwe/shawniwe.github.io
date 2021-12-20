@@ -7,6 +7,11 @@ body {
     box-sizing: content-box;
 }
 
+/* не на всех кнопках есть ссылки, поэтому для визуальной составляющей включаем курсор pointer */
+a {
+    cursor: pointer;
+}
+
 body, html {
     min-height: 100%;
 }
